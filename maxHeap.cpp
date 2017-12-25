@@ -88,17 +88,5 @@ void MaxHeap::remove(int key)
 
 int main()
 {
-    MaxHeap h(11);
-    h.insert(3);
-    h.insert(2);
-    h.remove(1);
-    h.insert(15);
-    h.insert(5);
-    h.insert(4);
-    h.insert(45);
-    std::cout << h.extractMax() << " ";
-    std::cout << h.getMax() << " ";
-    h.changeKey(2, 1);
-    std::cout << h.getMax();
     return 0;
 }
