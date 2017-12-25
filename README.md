@@ -1,1 +1,1 @@
-"Competetive programming solutions to problems" 
+Competetive programming stuff
