@@ -41,7 +41,6 @@ Node* buildMinCartesianTree(int arr[], int n){
         {
             rchild[last] = i;
             parent[i] = last;
-            //lchild[i] = -1;
         }
         else
         {
@@ -78,7 +77,6 @@ Node* buildMaxCartesianTree(int arr[], int n){
         {
             rchild[last] = i;
             parent[i] = last;
-            //lchild[i] = -1;
         }
         else
         {
@@ -101,10 +99,7 @@ int subtreeSize(Node* root)
     {
         return 0;
     }
-    else if (root->left == NULL && root->right != NULL) return 1 + subtreeSize(root->right);
-    else if (root->right == NULL && root->left != NULL) return 1 + subtreeSize(root->left);
-    else if (root->left == NULL && root->right == NULL) return 1;
-    else    return 1 + subtreeSize(root->left) + subtreeSize(root->right);
+    return 1 + subtreeSize(root->left) + subtreeSize(root->right);
 }
 
 /*
@@ -129,8 +124,13 @@ int subarrayMaximum(Node* root, int n)
 
 int main()
 {
-    int arr[] = {1, 5, 3, 5, 4, 1};
-    int n = sizeof(arr)/sizeof(int);
+    int n;
+    std::cin >> n;
+    int* arr = new int[n];
+    for (int i=0; i < n; i++)
+    {
+        std::cin >> arr[i];
+    }
  
     Node *root = buildMinCartesianTree(arr, n);
     printf("%d\n", subarrayMaximum(root, n));
