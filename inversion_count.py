@@ -1,6 +1,8 @@
 """
 A Python implementation of an algorithm counting inversions in an array.
-An inversion is a situation when a_i > a_(i+1) for i in range(0, N) where N is the length of the array.
+An inversion is a situation when a_i > a_(i+1) for i in range(0, N-1) where N is the length of the array.
+
+Szczepan Lukowski
 """
 
 
